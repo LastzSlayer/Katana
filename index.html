@@ -1,111 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Home to Katana</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home to Katana</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: radial-gradient(circle at top, #1e293b, #000);
-  color: white;
-}
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #1e293b 0%, #000000 60%);
+      color: white;
+    }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 40px 20px;
-}
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+      text-align: center;
+    }
 
-h1 {
-  text-align: center;
-  font-size: 40px;
-}
+    h1 {
+      font-size: 44px;
+      margin-bottom: 10px;
+    }
 
-.subtitle {
-  text-align: center;
-  color: #cbd5e1;
-}
+    .subtitle {
+      color: #cbd5e1;
+      margin-bottom: 40px;
+      font-size: 18px;
+    }
 
-.links {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
-  margin: 40px 0;
-}
+    .links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      max-width: 700px;
+      margin: 0 auto;
+    }
 
-.links a {
-  text-decoration: none;
-  text-align: center;
-  padding: 20px;
-  border-radius: 15px;
-  background: rgba(34,211,238,0.1);
-  border: 1px solid rgba(34,211,238,0.3);
-  color: #67e8f9;
-  font-weight: bold;
-}
+    .links a {
+      text-decoration: none;
+      text-align: center;
+      padding: 24px;
+      border-radius: 18px;
+      background: rgba(34, 211, 238, 0.1);
+      border: 1px solid rgba(34, 211, 238, 0.25);
+      color: #67e8f9;
+      font-weight: bold;
+      font-size: 22px;
+      transition: 0.2s ease;
+    }
 
-.card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 20px;
-  border-radius: 15px;
-  margin-bottom: 20px;
-}
+    .links a:hover {
+      transform: scale(1.02);
+      background: rgba(34, 211, 238, 0.16);
+    }
 
-@media(max-width:900px){
-  .links { grid-template-columns: 1fr; }
-}
-</style>
+    @media (max-width: 700px) {
+      .links {
+        grid-template-columns: 1fr;
+      }
+
+      h1 {
+        font-size: 34px;
+      }
+    }
+  </style>
 </head>
-
 <body>
+  <div class="container">
+    <h1>⚔️ Home to Katana ⚔️</h1>
+    <p class="subtitle">Choose where you want to go</p>
 
-<div class="container">
-  <h1>⚔️ Home to Katana ⚔️</h1>
-  <p class="subtitle">Your central hub for migration, wars, discord and guides</p>
-
-  <div class="links">
-    <a href="migration.html">Migration</a>
-    <a href="#glory">Glory Wars</a>
-    <a href="https://discord.com" target="_blank">Discord</a>
-    <a href="#tutorials">Tutorials</a>
+    <div class="links">
+      <a href="migration.html">Migration</a>
+      <a href="glory-wars.html">Glory Wars</a>
+      <a href="tutorials.html">Tutorials & Guides</a>
+      <a href="discord.html">Connect With Us</a>
+    </div>
   </div>
-
-  <div class="card" id="glory">
-    <h3>Glory Wars</h3>
-    <p>Rules, expectations, schedules and strategies for Glory Wars.</p>
-  </div>
-
-  <div class="card">
-    <h3>Discord</h3>
-    <p>Join our Discord using the link above for coordination and recruiting.</p>
-  </div>
-
-  <div class="card" id="tutorials">
-    <h3>Tutorials</h3>
-    <p>Guides, migration instructions and preparation tips.</p>
-  </div>
-
-  <div class="card">
-    <h3>Migration Info</h3>
-    <p>Click the Migration button above to apply. The form is on a separate page.</p>
-  </div>
-
-  <div class="card">
-    <h3>What We Review</h3>
-    <ul>
-      <li>Total power (in millions)</li>
-      <li>Hero power (in millions)</li>
-      <li>AR research progress</li>
-      <li>HQ level</li>
-      <li>T10 availability</li>
-    </ul>
-  </div>
-
-</div>
-
 </body>
 </html>
