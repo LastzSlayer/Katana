@@ -1,0 +1,199 @@
+export default function ServerMigrationForm() {
+  const alliances = [
+    "Katana",
+    "AOE",
+    "ERES",
+    "FAM4",
+    "Shield",
+    "NWG1",
+    "Lova"
+  ];
+
+  const quickLinks = [
+    { label: "Migration", href: "#migration-form" },
+    { label: "Glory Wars", href: "#glory-wars" },
+    { label: "Discord", href: "https://discord.com" },
+    { label: "Tutorials", href: "#tutorials" },
+  ];
+
+  return (
+    <div className="min-h-screen bg-black text-white">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#1e293b_0%,#000000_60%)]" />
+      <div className="relative mx-auto max-w-5xl px-6 py-12">
+        <div className="mb-10 text-center">
+          <div className="inline-block rounded-full border border-cyan-400/40 bg-cyan-400/10 px-4 py-1 text-sm tracking-[0.2em] text-cyan-300 uppercase">
+            Home to Katana
+          </div>
+          <h1 className="mt-4 text-4xl font-bold tracking-tight sm:text-5xl">
+            Join Our Server
+          </h1>
+          <p className="mx-auto mt-4 max-w-2xl text-base text-slate-300 sm:text-lg">
+            Your central hub for migration requests, Glory Wars information, Discord access, and tutorials.
+          </p>
+        </div>
+
+        <div className="mb-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {quickLinks.map((link) => (
+            <a
+              key={link.label}
+              href={link.href}
+              className="rounded-3xl border border-cyan-400/20 bg-cyan-400/10 px-5 py-5 text-center text-lg font-semibold text-cyan-300 shadow-xl transition hover:scale-[1.02] hover:bg-cyan-400/15"
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+
+        <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr]">
+          <div
+            id="migration-form"
+            className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-2xl backdrop-blur"
+          >
+            <h2 className="text-2xl font-semibold">Migration Application</h2>
+            <p className="mt-2 text-sm text-slate-300">
+              Complete all required fields so we can review your migration request quickly.
+            </p>
+
+            <form className="mt-6 space-y-5">
+              <div>
+                <label className="mb-2 block text-sm font-medium text-slate-200">Player Name</label>
+                <input
+                  type="text"
+                  placeholder="Enter your in-game name"
+                  className="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none ring-0 placeholder:text-slate-500"
+                />
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-medium text-slate-200">Current Server</label>
+                <input
+                  type="text"
+                  placeholder="Example: Server 542"
+                  className="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none placeholder:text-slate-500"
+                />
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-medium text-slate-200">Preferred Alliance</label>
+                <select className="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none">
+                  <option value="">Select an alliance</option>
+                  {alliances.map((alliance) => (
+                    <option key={alliance} value={alliance}>
+                      {alliance}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              <div className="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-slate-200">Total Power</label>
+                  <input
+                    type="number"
+                    placeholder="Enter total power"
+                    className="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none placeholder:text-slate-500"
+                  />
+                </div>
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-slate-200">Total Hero Power</label>
+                  <input
+                    type="number"
+                    placeholder="Enter hero power"
+                    className="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none placeholder:text-slate-500"
+                  />
+                </div>
+              </div>
+
+              <div className="grid gap-5 sm:grid-cols-2">
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-slate-200">HQ Level</label>
+                  <input
+                    type="number"
+                    placeholder="Enter HQ level"
+                    className="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none placeholder:text-slate-500"
+                  />
+                </div>
+                <div>
+                  <label className="mb-2 block text-sm font-medium text-slate-200">AR Research Completed?</label>
+                  <select className="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none">
+                    <option value="">Choose one</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                    <option value="partial">Partially</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-medium text-slate-200">Why do you want to migrate to our server?</label>
+                <textarea
+                  rows={4}
+                  placeholder="Tell us a little about yourself, your play style, and what you are looking for"
+                  className="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none placeholder:text-slate-500"
+                />
+              </div>
+
+              <div>
+                <label className="mb-2 block text-sm font-medium text-slate-200">Contact Link</label>
+                <input
+                  type="text"
+                  placeholder="Discord username, game contact, or external profile"
+                  className="w-full rounded-2xl border border-white/10 bg-black/40 px-4 py-3 text-white outline-none placeholder:text-slate-500"
+                />
+              </div>
+
+              <button
+                type="button"
+                className="w-full rounded-2xl bg-cyan-400 px-4 py-3 text-base font-semibold text-black transition hover:scale-[1.01]"
+              >
+                Submit Migration Request
+              </button>
+            </form>
+          </div>
+
+          <div className="space-y-6">
+            <div
+              id="glory-wars"
+              className="rounded-3xl border border-cyan-400/20 bg-cyan-400/10 p-6 shadow-xl backdrop-blur"
+            >
+              <h3 className="text-xl font-semibold text-cyan-300">Glory Wars</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-200">
+                Add your Glory Wars rules, event schedule, battle expectations, scoring guidance, or link this card to a
+                separate page later.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur">
+              <h3 className="text-xl font-semibold">Discord</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-300">
+                Use the Discord quick link above to send players directly into your server community for questions,
+                coordination, and recruiting.
+              </p>
+            </div>
+
+            <div
+              id="tutorials"
+              className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur"
+            >
+              <h3 className="text-xl font-semibold">Tutorials</h3>
+              <p className="mt-3 text-sm leading-6 text-slate-300">
+                Add beginner guides, migration instructions, alliance expectations, or event preparation walkthroughs here.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-xl backdrop-blur">
+              <h3 className="text-xl font-semibold">What We Review</h3>
+              <ul className="mt-4 space-y-3 text-sm text-slate-200">
+                <li>• Alliance preference and fit</li>
+                <li>• Total power and hero power</li>
+                <li>• AR research progress</li>
+                <li>• HQ level and overall readiness</li>
+                <li>• Communication and team mindset</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
