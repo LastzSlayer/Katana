@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tutorials & Guides</title>
+
   <style>
     body {
       margin: 0;
@@ -13,14 +14,15 @@
     }
 
     .wrapper {
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
       padding: 50px 20px;
+      text-align: center;
     }
 
     .back {
       display: inline-block;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
       color: #67e8f9;
       text-decoration: none;
       border: 1px solid rgba(34,211,238,0.3);
@@ -28,45 +30,90 @@
       border-radius: 999px;
     }
 
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #cbd5e1;
+      margin-bottom: 40px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
     .card {
+      text-decoration: none;
       background: rgba(255,255,255,0.05);
       border: 1px solid rgba(255,255,255,0.1);
       border-radius: 20px;
       padding: 30px;
+      transition: 0.2s ease;
+      color: white;
     }
 
-    h1 {
-      margin-top: 0;
-      font-size: 40px;
+    .card:hover {
+      transform: scale(1.03);
+      border-color: #22d3ee;
+      box-shadow: 0 0 20px rgba(34,211,238,0.3);
     }
 
-    p, li {
-      color: #dbe4ee;
-      line-height: 1.7;
-      font-size: 17px;
+    .card h2 {
+      margin: 0 0 10px;
+      color: #67e8f9;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      font-size: 15px;
+    }
+
+    @media (max-width: 700px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
+
 <body>
-  <div class="wrapper">
-    <a class="back" href="index.html">← Back to Home</a>
 
-    <div class="card">
-      <h1>Tutorials & Guides</h1>
-      <p>Use this page for migration help, beginner guides, preparation tips, and alliance instructions.</p>
+<div class="wrapper">
 
-      <ul>
-        <li>How migration works</li>
-        <li>What players should prepare before moving</li>
-        <li>Alliance expectations</li>
-        <li>War participation basics</li>
-        <li>General server guidance</li>
-      </ul>
+  <a class="back" href="index.html">← Back to Home</a>
 
-      <p>
-        Replace this with your real guides and tutorial content.
-      </p>
-    </div>
+  <h1>📘 Tutorials & Guides</h1>
+  <p class="subtitle">Choose a guide to get started</p>
+
+  <div class="grid">
+
+    <a href="season2.html" class="card">
+      <h2>Season 2 Guides</h2>
+      <p>Everything you need to prepare for Season 2 events and gameplay.</p>
+    </a>
+
+    <a href="svs.html" class="card">
+      <h2>SVS Guide</h2>
+      <p>Learn strategies, rules, and coordination for Server vs Server.</p>
+    </a>
+
+    <a href="war-basics.html" class="card">
+      <h2>War Basics</h2>
+      <p>Understand core war mechanics, teamwork, and battle roles.</p>
+    </a>
+
+    <a href="tips.html" class="card">
+      <h2>Tips for New Players</h2>
+      <p>Helpful advice to grow faster and avoid common mistakes.</p>
+    </a>
+
   </div>
+
+</div>
+
 </body>
 </html>
