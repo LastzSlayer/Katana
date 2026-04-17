@@ -1,306 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home to Katana</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home to Katana</title>
 
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: radial-gradient(circle at top, #1e293b 0%, #000000 60%);
-      color: white;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #1e293b, #000);
+  color: white;
+}
 
-    .wrapper {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 48px 24px;
-    }
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+}
 
-    .hero {
-      text-align: center;
-      margin-bottom: 40px;
-    }
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
 
-    .badge {
-      display: inline-block;
-      padding: 8px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(34, 211, 238, 0.35);
-      background: rgba(34, 211, 238, 0.1);
-      color: #67e8f9;
-      font-size: 12px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-    }
+.subtitle {
+  text-align: center;
+  color: #cbd5e1;
+}
 
-    h1 {
-      font-size: 48px;
-      margin: 18px 0 12px;
-    }
+.links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin: 40px 0;
+}
 
-    .hero p {
-      max-width: 760px;
-      margin: 0 auto;
-      color: #cbd5e1;
-      font-size: 18px;
-      line-height: 1.6;
-    }
+.links a {
+  text-decoration: none;
+  text-align: center;
+  padding: 20px;
+  border-radius: 15px;
+  background: rgba(34,211,238,0.1);
+  border: 1px solid rgba(34,211,238,0.3);
+  color: #67e8f9;
+  font-weight: bold;
+}
 
-    .quick-links {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin: 40px 0;
-    }
+.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
 
-    .quick-links a {
-      display: block;
-      text-align: center;
-      text-decoration: none;
-      color: #67e8f9;
-      font-weight: bold;
-      font-size: 20px;
-      padding: 22px 16px;
-      border-radius: 24px;
-      border: 1px solid rgba(34, 211, 238, 0.2);
-      background: rgba(34, 211, 238, 0.1);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-
-    .quick-links a:hover {
-      transform: scale(1.02);
-      background: rgba(34, 211, 238, 0.16);
-    }
-
-    .content {
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 32px;
-    }
-
-    .card {
-      border-radius: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(255, 255, 255, 0.05);
-      padding: 24px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-      backdrop-filter: blur(8px);
-    }
-
-    .card h2,
-    .card h3 {
-      margin-top: 0;
-    }
-
-    .muted {
-      color: #cbd5e1;
-      font-size: 14px;
-      line-height: 1.6;
-    }
-
-    form {
-      margin-top: 24px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 8px;
-      color: #e2e8f0;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 14px 16px;
-      border-radius: 18px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(0, 0, 0, 0.4);
-      color: white;
-      outline: none;
-      margin-bottom: 18px;
-    }
-
-    textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 18px;
-    }
-
-    button {
-      width: 100%;
-      border: none;
-      border-radius: 18px;
-      padding: 14px 16px;
-      background: #22d3ee;
-      color: black;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-
-    button:hover {
-      transform: scale(1.01);
-    }
-
-    .side-stack {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    ul {
-      padding-left: 18px;
-      margin-bottom: 0;
-    }
-
-    li {
-      margin-bottom: 10px;
-      color: #e2e8f0;
-    }
-
-    @media (max-width: 900px) {
-      .quick-links,
-      .content,
-      .two-col {
-        grid-template-columns: 1fr;
-      }
-
-      h1 {
-        font-size: 36px;
-      }
-    }
-  </style>
+@media(max-width:900px){
+  .links { grid-template-columns: 1fr; }
+}
+</style>
 </head>
+
 <body>
-  <div class="wrapper">
-    <div class="hero">
-      <div class="badge">Home to Katana</div>
-      <h1>Join Our Server</h1>
-      <p>
-        Your central hub for migration requests, Glory Wars information, Discord access, and tutorials.
-      </p>
-    </div>
 
-    <div class="quick-links">
-      <a href="#migration-form">Migration</a>
-      <a href="#glory-wars">Glory Wars</a>
-      <a href="https://discord.com" target="_blank">Discord</a>
-      <a href="#tutorials">Tutorials</a>
-    </div>
+<div class="container">
+  <h1>⚔️ Home to Katana ⚔️</h1>
+  <p class="subtitle">Your central hub for migration, wars, discord and guides</p>
 
-    <div class="content">
-      <div class="card" id="migration-form">
-        <h2>Migration Application</h2>
-        <p class="muted">
-          Complete all required fields so we can review your migration request quickly.
-        </p>
-
-        <form>
-          <label>Player Name</label>
-          <input type="text" placeholder="Enter your in-game name" />
-
-          <label>Current Server</label>
-          <input type="text" placeholder="Example: Server 542" />
-
-          <label>Preferred Alliance</label>
-          <select>
-            <option value="">Select an alliance</option>
-            <option>Katana</option>
-            <option>AOE</option>
-            <option>ERES</option>
-            <option>FAM4</option>
-            <option>Shield</option>
-            <option>NWG1</option>
-            <option>Lova</option>
-          </select>
-
-          <div class="two-col">
-            <div>
-              <label>Total Power</label>
-              <input type="number" placeholder="Enter total power" />
-            </div>
-            <div>
-              <label>Total Hero Power</label>
-              <input type="number" placeholder="Enter hero power" />
-            </div>
-          </div>
-
-          <div class="two-col">
-            <div>
-              <label>HQ Level</label>
-              <input type="number" placeholder="Enter HQ level" />
-            </div>
-            <div>
-              <label>AR Research Completed?</label>
-              <select>
-                <option value="">Choose one</option>
-                <option>Yes</option>
-                <option>No</option>
-                <option>Partially</option>
-              </select>
-            </div>
-          </div>
-
-          <label>Why do you want to migrate to our server?</label>
-          <textarea placeholder="Tell us a little about yourself, your play style, and what you are looking for"></textarea>
-
-          <label>Contact Link</label>
-          <input type="text" placeholder="Discord username, game contact, or external profile" />
-
-          <button type="submit">Submit Migration Request</button>
-        </form>
-      </div>
-
-      <div class="side-stack">
-        <div class="card" id="glory-wars" style="border-color: rgba(34, 211, 238, 0.2); background: rgba(34, 211, 238, 0.1);">
-          <h3 style="color:#67e8f9;">Glory Wars</h3>
-          <p class="muted" style="color:#e2e8f0;">
-            Add your Glory Wars rules, event schedule, battle expectations, scoring guidance, or link this card to a separate page later.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Discord</h3>
-          <p class="muted">
-            Use the Discord quick link above to send players directly into your server community for questions, coordination, and recruiting.
-          </p>
-        </div>
-
-        <div class="card" id="tutorials">
-          <h3>Tutorials</h3>
-          <p class="muted">
-            Add beginner guides, migration instructions, alliance expectations, or event preparation walkthroughs here.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>What We Review</h3>
-          <ul>
-            <li>Alliance preference and fit</li>
-            <li>Total power and hero power</li>
-            <li>AR research progress</li>
-            <li>HQ level and overall readiness</li>
-            <li>Communication and team mindset</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+  <div class="links">
+    <a href="migration.html">Migration</a>
+    <a href="#glory">Glory Wars</a>
+    <a href="https://discord.com" target="_blank">Discord</a>
+    <a href="#tutorials">Tutorials</a>
   </div>
+
+  <div class="card" id="glory">
+    <h3>Glory Wars</h3>
+    <p>Rules, expectations, schedules and strategies for Glory Wars.</p>
+  </div>
+
+  <div class="card">
+    <h3>Discord</h3>
+    <p>Join our Discord using the link above for coordination and recruiting.</p>
+  </div>
+
+  <div class="card" id="tutorials">
+    <h3>Tutorials</h3>
+    <p>Guides, migration instructions and preparation tips.</p>
+  </div>
+
+  <div class="card">
+    <h3>Migration Info</h3>
+    <p>Click the Migration button above to apply. The form is on a separate page.</p>
+  </div>
+
+  <div class="card">
+    <h3>What We Review</h3>
+    <ul>
+      <li>Total power (in millions)</li>
+      <li>Hero power (in millions)</li>
+      <li>AR research progress</li>
+      <li>HQ level</li>
+      <li>T10 availability</li>
+    </ul>
+  </div>
+
+</div>
+
 </body>
 </html>
