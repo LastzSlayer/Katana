@@ -29,7 +29,12 @@
         <div class="callout"><strong>Important:</strong> replace <code>YOUR_FORM_ID</code> in this file with your real Formspree form ID.</div>
       </div>
 
-      <form class="panel command-card form-grid" action="https://script.google.com/macros/s/AKfycbxoOThvA7Mfxa13h2zpnIaAstq7QAaboEYz4VH9SiFSmQJQGqVCmTXGoldZ5BownGAvZw/exec" method="POST">
+      <form 
+  class="panel command-card form-grid" 
+  action="https://script.google.com/macros/s/AKfycbxoOThvA7Mfxa13h2zpnIaAstq7QAaboEYz4VH9SiFSmQJQGqVCmTXGoldZ5BownGAvZw/exec" 
+  method="POST"
+  onsubmit="return lockForm(this);"
+>
         <label>Player Name<input name="player_name" required /></label>
         <label>Discord / Contact Info<input name="discord_contact" required /></label>
         <label>Current Server<input name="current_server" required /></label>
