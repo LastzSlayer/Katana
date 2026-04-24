@@ -3,85 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home to Katana</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: radial-gradient(circle at top, #1e293b 0%, #000000 60%);
-      color: white;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 20px;
-      text-align: center;
-    }
-
-    h1 {
-      font-size: 44px;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      color: #cbd5e1;
-      margin-bottom: 40px;
-      font-size: 18px;
-    }
-
-    .links {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .links a {
-      text-decoration: none;
-      text-align: center;
-      padding: 24px;
-      border-radius: 18px;
-      background: rgba(34, 211, 238, 0.1);
-      border: 1px solid rgba(34, 211, 238, 0.25);
-      color: #67e8f9;
-      font-weight: bold;
-      font-size: 22px;
-      transition: 0.2s ease;
-    }
-
-    .links a:hover {
-      transform: scale(1.02);
-      background: rgba(34, 211, 238, 0.16);
-    }
-
-    @media (max-width: 700px) {
-      .links {
-        grid-template-columns: 1fr;
-      }
-
-      h1 {
-        font-size: 34px;
-      }
-    }
-  </style>
+  <title>Katana Alliance</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>⚔️ Home to Katana ⚔️</h1>
-    <p class="subtitle">Choose where you want to go</p>
-
-    <div class="links">
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">⚔️</span><span>Katana</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
       <a href="migration.html">Migration</a>
       <a href="glory-wars.html">Glory Wars</a>
-      <a href="tutorials.html">Tutorials & Guides</a>
-      <a href="discord.html">Connect With Us</a>
-    </div>
+      <a href="tutorials.html">Guides</a>
+      <a href="discord.html">Discord</a>
+    </nav>
   </div>
+</header>
+<main>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">Elite alliance command center</div>
+        <h1>Welcome to Katana</h1>
+        <p>Katana is built for players who want organized migration, stronger war coordination, better guides, and a serious community that plays to win.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="migration.html">Apply for Migration</a>
+          <a class="btn" href="discord.html">Join Discord</a>
+        </div>
+      </div>
+      <aside class="panel command-card">
+        <span class="badge">Alliance Status</span>
+        <h3 style="margin-top:16px;">Prepare. Coordinate. Strike.</h3>
+        <p>Use this hub to submit migration details, review Glory Wars plans, learn core strategies, and connect with leadership.</p>
+        <div class="stat-grid">
+          <div class="stat"><strong>4</strong><span>Main sections</span></div>
+          <div class="stat"><strong>24/7</strong><span>Discord access</span></div>
+          <div class="stat"><strong>War</strong><span>Ready guides</span></div>
+          <div class="stat"><strong>Team</strong><span>Focused growth</span></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Choose your path</div>
+      <h2>Alliance Portal</h2>
+      <div class="cards">
+        <a class="card" href="migration.html">
+          <div class="icon">🛡️</div>
+          <h3>Migration</h3>
+          <p>Submit your player profile so leadership can review power, research, troops, and alliance fit.</p>
+        </a>
+        <a class="card" href="glory-wars.html">
+          <div class="icon">🔥</div>
+          <h3>Glory Wars</h3>
+          <p>Review battle rules, rally discipline, target priority, and war communication standards.</p>
+        </a>
+        <a class="card" href="tutorials.html">
+          <div class="icon">📜</div>
+          <h3>Tutorials & Guides</h3>
+          <p>Learn growth basics, Season 2 preparation, SVS strategy, and war mechanics.</p>
+        </a>
+        <a class="card" href="discord.html">
+          <div class="icon">💬</div>
+          <h3>Connect</h3>
+          <p>Join Discord to speak with leadership, coordinate migration, and stay updated.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="container footer-inner">
+    <strong>⚔️ Katana Alliance</strong>
+    <span>Built for migration, war coordination, guides, and community updates.</span>
+  </div>
+</footer>
 </body>
 </html>
