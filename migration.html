@@ -4,322 +4,68 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Katana Migration Application</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: radial-gradient(circle at top, #1e293b 0%, #000000 60%);
-      color: white;
-    }
-
-    .wrapper {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 48px 24px;
-    }
-
-    .topbar {
-      margin-bottom: 24px;
-    }
-
-    .back-link {
-      display: inline-block;
-      color: #67e8f9;
-      text-decoration: none;
-      border: 1px solid rgba(34, 211, 238, 0.3);
-      background: rgba(34, 211, 238, 0.08);
-      padding: 10px 16px;
-      border-radius: 999px;
-      font-weight: bold;
-    }
-
-    .hero {
-      text-align: center;
-      margin-bottom: 32px;
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 8px 16px;
-      border-radius: 999px;
-      border: 1px solid rgba(34, 211, 238, 0.35);
-      background: rgba(34, 211, 238, 0.1);
-      color: #67e8f9;
-      font-size: 12px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-    }
-
-    h1 {
-      font-size: 42px;
-      margin: 18px 0 10px;
-    }
-
-    .hero p {
-      max-width: 720px;
-      margin: 0 auto;
-      color: #cbd5e1;
-      font-size: 17px;
-      line-height: 1.6;
-    }
-
-    .card {
-      border-radius: 24px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(255, 255, 255, 0.05);
-      padding: 28px;
-      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-      backdrop-filter: blur(8px);
-    }
-
-    .card h2 {
-      margin-top: 0;
-      margin-bottom: 8px;
-    }
-
-    .muted {
-      color: #cbd5e1;
-      font-size: 14px;
-      line-height: 1.6;
-      margin-bottom: 24px;
-    }
-
-    label {
-      display: block;
-      margin-bottom: 8px;
-      color: #e2e8f0;
-      font-size: 14px;
-      font-weight: 600;
-    }
-
-    input,
-    select,
-    textarea {
-      width: 100%;
-      padding: 14px 16px;
-      border-radius: 18px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(0, 0, 0, 0.4);
-      color: white;
-      outline: none;
-      margin-bottom: 10px;
-    }
-    input {
-  height: 50px;
-}
-
-textarea {
-  resize: vertical;
-  min-height: 120px;
-}
-
-    textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-    }
-
-    .three-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 12px;
-    }
-
-    button {
-      width: 100%;
-      border: none;
-      border-radius: 18px;
-      padding: 15px 16px;
-      background: #22d3ee;
-      color: black;
-      font-size: 16px;
-      font-weight: 700;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    }
-
-    button:hover {
-      transform: scale(1.01);
-    }
-
-    .note {
-      margin-top: 18px;
-      color: #94a3b8;
-      font-size: 13px;
-      line-height: 1.6;
-    }
-    
-    @media (max-width: 900px) {
-      .two-col,
-      .three-col {
-        grid-template-columns: 1fr;
-      }
-
-      h1 {
-        font-size: 34px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="wrapper">
-    <div class="topbar">
-      <a class="back-link" href="index.html">← Back to Home</a>
-    </div>
-
-    <div class="hero">
-      <div class="badge">Migration Application</div>
-      <h1>Apply to Join Katana</h1>
-      <p>
-        Fill out this form so leadership can review your account, power, research,
-        and alliance preference before migration.
-      </p>
-    </div>
-
-    <div class="card">
-      <h2>Player Application</h2>
-      <p class="muted">
-        This page is ready for your real form connection later. For now, it is the full layout.
-      </p>
-
-      <form action="https://script.google.com/macros/s/AKfycbyP0t8ZR7RTXabik2c3b9qsa7x2ej-74sdNmZULC1Gw-cq5FoBwQHZ5FVn5SJY2PcO_lg/exec" method="POST">
-        <label for="player_name">Player Name</label>
-        <input id="player_name" type="text" name="player_name" placeholder="Enter your in-game name" required />
-
-        <div class="two-col">
-  <div>
-    <label for="current_server">Current Server</label>
-    <input 
-      id="current_server"
-      type="text" 
-      name="current_server" 
-      placeholder="Example: Server 542" 
-      required
-    />
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">⚔️</span><span>Katana</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="migration.html">Migration</a>
+      <a href="glory-wars.html">Glory Wars</a>
+      <a href="tutorials.html">Guides</a>
+      <a href="discord.html">Discord</a>
+    </nav>
   </div>
+</header>
+<main>
+  <section class="section">
+    <div class="container two-column">
+      <div>
+        <div class="eyebrow">Join Katana</div>
+        <h1>Migration Application</h1>
+        <p>Fill this out so leadership can review your account strength, research progress, war readiness, and preferred alliance placement.</p>
+        <div class="callout"><strong>Important:</strong> replace <code>YOUR_FORM_ID</code> in this file with your real Formspree form ID.</div>
+      </div>
 
-  <div>
-    <label for="current_alliance">Current Alliance</label>
-    <input 
-      id="current_alliance"
-      type="text" 
-      name="current_alliance" 
-      placeholder="Enter your current alliance name" 
-      required
-    />
-  </div>
-</div>
-            <label for="kill_ranking">Kill Ranking (in your server)</label>
-<input 
-  id="kill_ranking"
-  type="number" 
-  name="kill_ranking" 
-  placeholder="Example: 5 (Top 5)" 
-  required
-/>
-            <label for="preferred_alliance">Preferred Alliance</label>
-            <select id="preferred_alliance" name="preferred_alliance" required>
-              <option value="">Select an alliance</option>
-              <option>Katana</option>
-              <option>AOE</option>
-              <option>ERES</option>
-              <option>FAM4</option>
-              <option>Shield</option>
-              <option>NWG1</option>
-              <option>Lova</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="two-col">
-  <div>
-    <label>Total Power (in millions)</label>
-    <input type="number" placeholder="Example: 450" />
-  </div>
-
-  <div>
-    <label>Hero Power (in millions)</label>
-    <input type="number" placeholder="Example: 120" />
-  </div>
-</div>
-
-        <div class="three-col">
-  <div>
-    <label>HQ Level</label>
-    <input type="number" placeholder="Example: 35" />
-  </div>
-
-  <div>
-    <label>AR Research Completed?</label>
-    <select>
-      <option>Choose one</option>
-      <option>Yes</option>
-      <option>No</option>
-      <option>Partial</option>
-    </select>
-  </div>
-
-  <div>
-    <label>Do you have T10s?</label>
-    <select>
-      <option>Choose one</option>
-      <option>Yes</option>
-      <option>No</option>
-    </select>
-  </div>
-</div>
-          <div class="two-col">
-  <div>
-    <label>Unit Special Training</label>
-    <select>
-      <option>Select range</option>
-      <option>1% - 10%</option>
-      <option>11% - 20%</option>
-      <option>21% - 30%</option>
-      <option>31% - 40%</option>
-      <option>41% - 50%</option>
-      <option>51% - 60%</option>
-      <option>61% - 70%</option>
-      <option>71% - 80%</option>
-      <option>81% - 90%</option>
-      <option>91% - 100%</option>
-    </select>
-  </div>
-</div>
-
-        <label for="playstyle">Play Style / Notes</label>
-        <textarea
-          id="playstyle"
-          name="playstyle_notes"
-          placeholder="Tell us about your play style, activity level, event focus, and anything else we should know."
-          required
-        ></textarea>
-
-        <label for="contact_info">Discord / Contact Info</label>
-        <input
-          id="contact_info"
-          type="text"
-          name="contact_info"
-          placeholder="Discord username, game contact, or another way to reach you"
-          required
-        />
-
-        <button type="submit">Submit Migration Request</button>
-
-        <p class="note">
-          Replace <strong>YOUR_FORM_ID</strong> with your Formspree form ID when you're ready to receive submissions.
-        </p>
+      <form class="panel command-card form-grid" action="https://script.google.com/macros/s/AKfycbyP0t8ZR7RTXabik2c3b9qsa7x2ej-74sdNmZULC1Gw-cq5FoBwQHZ5FVn5SJY2PcO_lg/exec" method="POST">
+        <label>Player Name<input name="player_name" required /></label>
+        <label>Discord / Contact Info<input name="discord_contact" required /></label>
+        <label>Current Server<input name="current_server" required /></label>
+        <label>Current Alliance<input name="current_alliance" /></label>
+        <label>Kill Ranking<input name="kill_ranking" placeholder="Example: Top 50" /></label>
+        <label>Preferred Alliance
+          <select name="preferred_alliance" required>
+            <option value="">Select an alliance</option>
+            <option>Katana</option><option>AOE</option><option>ERES</option><option>FAM4</option><option>Shield</option><option>NWG1</option><option>Lova</option>
+          </select>
+        </label>
+        <label>Total Power, millions<input type="number" name="total_power" min="0" step="0.1" /></label>
+        <label>Hero Power, millions<input type="number" name="hero_power" min="0" step="0.1" /></label>
+        <label>HQ Level<input type="number" name="hq_level" min="1" max="40" /></label>
+        <label>AR Research Completed?
+          <select name="ar_research"><option>Choose one</option><option>Yes</option><option>No</option><option>Partial</option></select>
+        </label>
+        <label>Do you have T10s?
+          <select name="t10s"><option>Choose one</option><option>Yes</option><option>No</option></select>
+        </label>
+        <label>Unit Special Training
+          <select name="unit_special_training">
+            <option>Select range</option><option>1% - 10%</option><option>11% - 20%</option><option>21% - 30%</option><option>31% - 40%</option><option>41% - 50%</option><option>51% - 60%</option><option>61% - 70%</option><option>71% - 80%</option><option>81% - 90%</option><option>91% - 100%</option>
+          </select>
+        </label>
+        <label class="full">Play Style / Notes<textarea name="notes" placeholder="Tell us about your activity, war experience, spending level if relevant, and what you want from Katana."></textarea></label>
+        <button class="btn primary full" type="submit">Submit Migration Request</button>
       </form>
     </div>
+  </section>
+</main>
+<footer>
+  <div class="container footer-inner">
+    <strong>⚔️ Katana Alliance</strong>
+    <span>Built for migration, war coordination, guides, and community updates.</span>
   </div>
+</footer>
 </body>
 </html>
