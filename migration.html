@@ -72,5 +72,29 @@
     <span>Built for migration, war coordination, guides, and community updates.</span>
   </div>
 </footer>
+<script>
+let formAlreadySubmitted = false;
+
+function lockForm(form) {
+  if (formAlreadySubmitted) {
+    return false;
+  }
+
+  formAlreadySubmitted = true;
+
+  const button = form.querySelector('button[type="submit"]');
+
+  if (button) {
+    button.disabled = true;
+    button.innerText = "Submitting...";
+    button.style.opacity = "0.6";
+    button.style.cursor = "not-allowed";
+  }
+
+  form.style.pointerEvents = "none";
+
+  return true;
+}
+</script>  
 </body>
 </html>
