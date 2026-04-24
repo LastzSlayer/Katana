@@ -3,117 +3,52 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tutorials & Guides</title>
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: radial-gradient(circle at top, #1e293b 0%, #000000 60%);
-      color: white;
-    }
-
-    .wrapper {
-      max-width: 1000px;
-      margin: auto;
-      padding: 50px 20px;
-      text-align: center;
-    }
-
-    .back {
-      display: inline-block;
-      margin-bottom: 30px;
-      color: #67e8f9;
-      text-decoration: none;
-      border: 1px solid rgba(34,211,238,0.3);
-      padding: 10px 16px;
-      border-radius: 999px;
-    }
-
-    h1 {
-      font-size: 42px;
-      margin-bottom: 10px;
-    }
-
-    .subtitle {
-      color: #cbd5e1;
-      margin-bottom: 40px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .card {
-      text-decoration: none;
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
-      border-radius: 20px;
-      padding: 30px;
-      transition: 0.2s ease;
-      color: white;
-    }
-
-    .card:hover {
-      transform: scale(1.03);
-      border-color: #22d3ee;
-      box-shadow: 0 0 20px rgba(34,211,238,0.3);
-    }
-
-    .card h2 {
-      margin: 0 0 10px;
-      color: #67e8f9;
-    }
-
-    .card p {
-      color: #cbd5e1;
-      font-size: 15px;
-    }
-
-    @media (max-width: 700px) {
-      .grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
+  <title>Katana Tutorials & Guides</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-<div class="wrapper">
-
-  <a class="back" href="index.html">← Back to Home</a>
-
-  <h1>📘 Tutorials & Guides</h1>
-  <p class="subtitle">Choose a guide to get started</p>
-
-  <div class="grid">
-
-    <a href="season2.html" class="card">
-      <h2>Season 2 Guides</h2>
-      <p>Everything you need to prepare for Season 2 events and gameplay.</p>
-    </a>
-
-    <a href="svs.html" class="card">
-      <h2>SVS Guide</h2>
-      <p>Learn strategies, rules, and coordination for Server vs Server.</p>
-    </a>
-
-    <a href="war-basics.html" class="card">
-      <h2>War Basics</h2>
-      <p>Understand core war mechanics, teamwork, and battle roles.</p>
-    </a>
-
-    <a href="tips.html" class="card">
-      <h2>Tips for New Players</h2>
-      <p>Helpful advice to grow faster and avoid common mistakes.</p>
-    </a>
-
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">⚔️</span><span>Katana</span></a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="migration.html">Migration</a>
+      <a href="glory-wars.html">Glory Wars</a>
+      <a href="tutorials.html">Guides</a>
+      <a href="discord.html">Discord</a>
+    </nav>
   </div>
+</header>
+<main>
+  <section class="section">
+    <div class="container">
+      <div class="eyebrow">Training hall</div>
+      <h1>Tutorials & Guides</h1>
+      <p>Use these guides to grow faster, fight smarter, and prepare for alliance events.</p>
+      <div class="cards">
+        <div class="card"><div class="icon">❄️</div><h3>Season 2 Prep</h3><p>Focus on saving speedups, managing resources, upgrading key buildings, and preparing troops before major Season 2 events.</p></div>
+        <div class="card"><div class="icon">🌍</div><h3>SVS Guide</h3><p>Watch enemy server activity, follow alliance callouts, avoid solo point feeding, and coordinate rallies during scoring windows.</p></div>
+        <div class="card"><div class="icon">⚔️</div><h3>War Basics</h3><p>Learn when to shield, reinforce, rally, scout, fake rally, defend, and pull troops to reduce losses.</p></div>
+        <div class="card"><div class="icon">🚀</div><h3>New Player Tips</h3><p>Join events, ask questions, keep builders busy, avoid wasting premium items, and grow with alliance help.</p></div>
+      </div>
 
-</div>
-
+      <section class="section">
+        <h2>Quick Growth Checklist</h2>
+        <ul class="feature-list">
+          <li>Keep research, construction, and training running whenever possible.</li>
+          <li>Save big speedups for events where rewards give value back.</li>
+          <li>Upgrade heroes and gear based on your main role and troop focus.</li>
+          <li>Ask leadership before major migration, alliance, or war decisions.</li>
+        </ul>
+      </section>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="container footer-inner">
+    <strong>⚔️ Katana Alliance</strong>
+    <span>Built for migration, war coordination, guides, and community updates.</span>
+  </div>
+</footer>
 </body>
 </html>
