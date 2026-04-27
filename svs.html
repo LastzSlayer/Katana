@@ -39,11 +39,27 @@
 
         <input type="text" name="player_name" placeholder="Player Name" required>
 
-        <select name="svs_group" required>
-          <option value="">Select Group</option>
-          <option value="Mud Fighters">Mud Fighters</option>
-          <option value="Grass Fighters">Grass Fighters</option>
-        </select>
+        <div class="full">
+  <p><strong>Choose your SVS group:</strong></p>
+
+  <div class="cards" style="grid-template-columns: repeat(2, 1fr);">
+
+    <label class="card" style="cursor:pointer;">
+      <input type="radio" name="svs_group" value="Mud Fighters" required>
+      <div class="icon">🟫</div>
+      <h3>Mud Fighters</h3>
+      <p>Fight in Mud battles</p>
+    </label>
+
+    <label class="card" style="cursor:pointer;">
+      <input type="radio" name="svs_group" value="Grass Fighters" required>
+      <div class="icon">🌿</div>
+      <h3>Grass Fighters</h3>
+      <p>Fight in Grass battles</p>
+    </label>
+
+  </div>
+</div>
 
         <select name="availability" required>
           <option value="">Availability</option>
