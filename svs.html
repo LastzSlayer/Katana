@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SVS Availability</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html">⚔️ Katana</a>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="migration.html">Migration</a>
+      <a href="glory-wars.html">Glory Wars</a>
+      <a href="tutorials.html">Guides</a>
+      <a href="svs.html">SVS</a>
+      <a href="discord.html">Discord</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="section">
+    <div class="container">
+      <h1>SVS Availability</h1>
+      <p>Let leadership know if you're available for Saturday SVS and which group you will fight in.</p>
+
+      <form 
+        class="panel command-card form-grid"
+        action="YOUR_GOOGLE_SCRIPT_URL"
+        method="POST"
+        target="hidden_iframe"
+        onsubmit="return lockForm(this);"
+      >
+
+        <input type="text" name="player_name" placeholder="Player Name" required>
+
+        <select name="svs_group" required>
+          <option value="">Select Group</option>
+          <option value="Mud Fighters">Mud Fighters</option>
+          <option value="Grass Fighters">Grass Fighters</option>
+        </select>
+
+        <select name="availability" required>
+          <option value="">Availability</option>
+          <option value="Available Saturday">Available Saturday</option>
+          <option value="Not Available">Not Available</option>
+        </select>
+
+        <button type="submit" class="btn primary full">
+          Submit SVS Availability
+        </button>
+
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <strong>⚔️ Katana Alliance</strong>
+    <span>SVS coordination and planning</span>
+  </div>
+</footer>
+
+<iframe name="hidden_iframe" style="display:none;"></iframe>
+
+<script>
+let formAlreadySubmitted = false;
+
+function lockForm(form) {
+  if (formAlreadySubmitted) return false;
+
+  formAlreadySubmitted = true;
+
+  const button = form.querySelector('button[type="submit"]');
+  button.disabled = true;
+  button.innerText = "Submitting...";
+
+  setTimeout(() => {
+    window.location.href = "thankyou.html";
+  }, 2000);
+
+  return true;
+}
+</script>
+
+</body>
+</html>
