@@ -337,4 +337,19 @@ footer {
 
   .nav-links { justify-content: flex-start; }
   .nav-links a { padding: 8px 9px; font-size: 0.84rem; }
+
+  /* SVS selection cards */
+.card input[type="radio"] {
+  display: none;
+}
+
+.card {
+  transition: all 0.2s ease;
+}
+
+.card:has(input:checked) {
+  border: 2px solid #f4c45f;
+  transform: scale(1.03);
+  box-shadow: 0 0 20px rgba(244, 196, 95, 0.4);
+}
 }
